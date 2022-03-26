@@ -1,0 +1,28 @@
+.main-container{
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+}
+.ball-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+.selector-container{
+    background-color: lightgray;
+}
+.selector-container h3{
+    text-align: center;
+}
+.selection-info{
+    background-color: honeydew;
+    margin: 0 10px;
+    padding: 10px 10px;
+    border-radius: 8px;
+}
+
+
+@media screen and (max-width:688px) {
+    .ball-container{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

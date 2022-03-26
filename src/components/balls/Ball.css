@@ -1,0 +1,46 @@
+.ball{
+    width: 240px;
+    height: 350px;
+    border-radius: 8px;
+    border: 2px solid darkgray;
+    margin-top: 20px;
+    padding-left: 5px;
+    background-color: rgba(211, 211, 211, 0.274);
+}
+.ball img{
+    width: 230px;
+    height: 165px;
+    border-radius: 8px;
+    margin-top: 5px;
+    margin-left: 2px;
+}
+.ball-name{
+    font-size: 21px;
+    font-weight: 400;
+    line-height: 20px;
+}
+.btn{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+.btn-select{
+    width: 50%;
+    background-color: coral;
+    border: none;
+    border-radius: 50px;
+    font-weight: 600;
+    box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.3),
+    0 6px 20px 0 rgba(0, 0, 0, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.btn-select:hover{
+    background-color: lightgreen;
+    cursor: pointer;
+    transition: .2s;
+}
+.btn-select p{
+    margin-right: 10px;
+}
