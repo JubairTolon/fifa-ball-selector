@@ -1,14 +1,24 @@
-import React from 'react';
+import React, { useState } from 'react';
+import Choose1 from '../chooseOne/Choose1';
 import './SelectorCart.css'
-
 const SelectorCart = ({selector}) => {
     const items = selector;
-
+    const [oneForMe, setOneForMe] = useState([]);
+    // const [chooseAgain, setChooseAgain] = useState([]);
+    
+    const ChooseOne = (items) => {
+   
+        const oneSelect = Math.floor(Math.random() * items.length+1);
+        const oneSelectItem = items[oneSelect];
+        setOneForMe(oneSelectItem);
+   
+    }
+    
     return (      
         <div className='selector-cart'>
             <h3>Ball Selection Summary</h3>
                 <div className='selection-info'>
-                    <div className='item'>
+                    <div className='item'> 
                         {  
                             items.map(item => 
                             <p key={item.id}>
@@ -16,8 +26,9 @@ const SelectorCart = ({selector}) => {
                             </p>
                             )
                         }                        
-                    </div>                            
-                <button className='choose1-btn'>Choose 1 For Me</button><br></br>
+                    </div>  
+                    <Choose1 finalOne={oneForMe}></Choose1>                        
+                <button onClick={()=> ChooseOne(items)}  className='choose1-btn'>Choose 1 For Me</button><br></br>
                 <button className='chooseAgain-btn'>Choose Again</button>
                 </div>
         </div>

@@ -16,8 +16,7 @@ const Selector = () => {
 
     const handleAddBallToSelector = (ball) => {
         const newselector = [...selector, ball];
-        setSelector(newselector);
-        
+        setSelector(newselector); 
     }
     return (
         <div className='main-container'>
