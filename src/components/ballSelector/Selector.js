@@ -13,10 +13,21 @@ const Selector = () => {
         .then(res => res.json())
         .then(data => setBalls(data))
     },[])
-
+    
     const handleAddBallToSelector = (ball) => {
-        const newselector = [...selector, ball];
-        setSelector(newselector); 
+        // console.log(ball)
+
+        const newSelector = [...selector, ball];
+        for (let index = 0; index < newSelector.length; index++) {
+            if(newSelector.length > 4){
+                break
+            }
+            else{
+                setSelector(newSelector);
+            }
+            
+        }
+
     }
     return (
         <div className='main-container'>
@@ -28,6 +39,7 @@ const Selector = () => {
                 ball={ball}
                 handleAddToSelector = {handleAddBallToSelector}
                 ></Ball>)
+
                 }
             </div>
             <div className="selector-container">
