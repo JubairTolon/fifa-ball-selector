@@ -6,7 +6,7 @@ function App() {
   return (
     <div>
       <div className='header'>
-        <h2>FIFA Ball Selector</h2>
+        <h2>FIFA 2022 Ball Selector</h2>
       </div>
         <Selector></Selector>
         <HowReactWorks></HowReactWorks>

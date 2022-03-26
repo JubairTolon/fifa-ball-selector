@@ -34,8 +34,8 @@ const SelectorCart = ({selector}) => {
                         }                        
                     </div>  
                     <Choose1 finalOne={oneForMe}></Choose1>                        
-                <button onClick={()=> ChooseOne(items)}  className='choose1-btn'>Choose 1 For Me</button><br></br>
-                <button onClick={()=> ChooseAgain(chooseAgain)} className='chooseAgain-btn'>Choose Again</button>
+                <button onClick={()=> ChooseOne(items)}  className='choose1-btn'><strong>Choose 1 For Me</strong></button><br></br>
+                <button onClick={()=> ChooseAgain(chooseAgain)} className='chooseAgain-btn'><strong>Choose Again</strong></button>
                 </div>
         </div>
     );
