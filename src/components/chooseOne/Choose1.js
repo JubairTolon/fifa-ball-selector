@@ -1,7 +1,7 @@
 import React from 'react';
 import './Choose1.css'
 
-const Choose1 = ({finalOne, items}) => {
+const Choose1 = ({finalOne}) => {
     const {name} = finalOne;
     // console.log(items)
 

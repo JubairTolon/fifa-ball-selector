@@ -4,13 +4,20 @@ import './SelectorCart.css'
 const SelectorCart = ({selector}) => {
     const items = selector;
     const [oneForMe, setOneForMe] = useState([]);
-    // const [chooseAgain, setChooseAgain] = useState([]);
+    const [chooseAgain, setChooseAgain] = useState([]);
     
     const ChooseOne = (items) => {
-        const oneSelect = Math.floor(Math.random() * items.length+1);
+        const oneSelect = Math.floor(Math.random() * items.length + 1);
         const oneSelectItem = items[oneSelect];
         setOneForMe(oneSelectItem);
-        selector.length =0;  
+        selector.length = 0;
+        
+    }
+    const ChooseAgain = () => {
+        const blank = [];
+        setChooseAgain(blank);
+        selector.length = 0;
+
     }
     
     return (      
@@ -28,7 +35,7 @@ const SelectorCart = ({selector}) => {
                     </div>  
                     <Choose1 finalOne={oneForMe}></Choose1>                        
                 <button onClick={()=> ChooseOne(items)}  className='choose1-btn'>Choose 1 For Me</button><br></br>
-                <button className='chooseAgain-btn'>Choose Again</button>
+                <button onClick={()=> ChooseAgain(chooseAgain)} className='chooseAgain-btn'>Choose Again</button>
                 </div>
         </div>
     );
