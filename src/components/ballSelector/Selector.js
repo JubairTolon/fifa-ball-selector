@@ -17,11 +17,11 @@ const Selector = () => {
     const handleAddBallToSelector = (ball) => {
         const newselector = [...selector, ball];
         setSelector(newselector);
+        
     }
     return (
         <div className='main-container'>
-            <div className="ball-container">
-                
+            <div className="ball-container">      
                 {
                 balls.map(ball =>
                 <Ball
