@@ -7,11 +7,10 @@ const SelectorCart = ({selector}) => {
     // const [chooseAgain, setChooseAgain] = useState([]);
     
     const ChooseOne = (items) => {
-   
         const oneSelect = Math.floor(Math.random() * items.length+1);
         const oneSelectItem = items[oneSelect];
         setOneForMe(oneSelectItem);
-   
+        selector.length =0;  
     }
     
     return (      
