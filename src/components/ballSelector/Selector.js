@@ -16,19 +16,24 @@ const Selector = () => {
     
     const handleAddBallToSelector = (ball) => {
         // console.log(ball)
-
         const newSelector = [...selector, ball];
+   
+        const array = selector.find(({id}) => id === ball.id)
+    
         for (let index = 0; index < newSelector.length; index++) {
             if(newSelector.length > 4){
-                break
+                alert('Not more than 4 items');
+                break;
+            }
+            else if(array){
+                break;
             }
             else{
                 setSelector(newSelector);
-            }
-            
+            }           
         }
-
     }
+    
     return (
         <div className='main-container'>
             <div className="ball-container">      
@@ -39,7 +44,6 @@ const Selector = () => {
                 ball={ball}
                 handleAddToSelector = {handleAddBallToSelector}
                 ></Ball>)
-
                 }
             </div>
             <div className="selector-container">
